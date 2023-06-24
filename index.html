@@ -982,28 +982,33 @@
             </div> -->
           </div>
 
-          <form action="" class="contact__form grid">
+          <form
+            action="send-form.php"
+            method="POST"
+            class="contact__form grid"
+            id="myForm"
+          >
             <div class="contact__inputs grid">
               <div class="contact__content">
                 <label for="" class="contact__label">Name</label>
-                <input type="text" class="contact__input" />
+                <input type="text" name="name" class="contact__input" />
               </div>
 
               <div class="contact__content">
                 <label for="" class="contact__label">Email</label>
-                <input type="email" class="contact__input" />
+                <input type="email" name="email" class="contact__input" />
               </div>
             </div>
 
             <div class="contact__content">
               <label for="" class="contact__label">Project</label>
-              <input type="text" class="contact__input" />
+              <input type="text" name="project" class="contact__input" />
             </div>
 
             <div class="contact__content">
               <label for="" class="contact__label">Message</label>
               <textarea
-                name=""
+                name="message"
                 id=""
                 cols="0"
                 rows="7"
@@ -1012,9 +1017,21 @@
             </div>
 
             <div>
-              <a href="#" class="button button--flex"> Send Message </a>
+              <button type="submit" class="button2 button--flex2">
+                Send Message
+              </button>
             </div>
           </form>
+        </div>
+
+        <!-- Alert -->
+        <div class="alert alert-success show-alert" id="alert-success">
+          <i class="bx bx-check-circle alert__icon"></i> Thank you, message sent
+          successfully!
+        </div>
+        <div class="alert alert-danger" id="alert-danger">
+          <i class="bx bxs-x-circle alert__icon"></i> Sorry, message failed to
+          deliver!
         </div>
       </section>
     </main>

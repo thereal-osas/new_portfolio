@@ -361,6 +361,21 @@ img {
   background-color: var(--first-color-alt);
 }
 
+.button2 {
+  display: inline-block;
+  background-color: var(--button-bg);
+  color: var(--color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button2:hover {
+  background-color: var(--first-color-alt);
+}
+
 .button__icon {
   font-size: 1.25rem;
   margin-left: var(--mb-0-5);
@@ -378,6 +393,11 @@ img {
 }
 
 .button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.button--flex2 {
   display: inline-flex;
   align-items: center;
 }
@@ -850,6 +870,35 @@ img {
   border: none;
   outline: none;
   padding: 0.25rem 0.5rem 0.5rem 0;
+}
+
+/* Alerts */
+.alert {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: max-content;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+.alert__icon {
+  margin-right: 0.3rem;
+}
+
+.alert-success {
+  background-color: aquamarine;
+}
+
+.alert-danger {
+  background-color: crimson;
+}
+
+.show-alert {
+  display: flex;
 }
 
 /* Footer */

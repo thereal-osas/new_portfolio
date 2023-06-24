@@ -207,3 +207,33 @@ themeButton.addEventListener('click', () => {
 })
 
 /* light/dark mode based on system */
+
+/* Send Form */
+const alrtSuccess = document.getElementById('alert-success')
+const alrtDanger = document.getElementById('alert-danger')
+
+const handleForm = (e) => {
+  e.preventDefault()
+
+  var formData = new FormData(this)
+
+  fetch('send-form.php', {
+    method: 'POST',
+    body: formData,
+  })
+    .then(function (response) {
+      if (response.ok) {
+        setTimeout(alrtSuccess.classList.add('show-alert'), 3000)
+
+        console.log('Email sent successfully!')
+      } else {
+        setTimeout(alrtDanger.classList.add('show-alert'), 3000)
+        console.log('Failed to send email.')
+      }
+    })
+    .catch(function (error) {
+      console.log('Error occurred:', error)
+    })
+}
+
+document.getElementById('myForm').addEventListener('submit', handleForm)
