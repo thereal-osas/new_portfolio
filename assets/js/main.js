@@ -209,7 +209,7 @@ themeButton.addEventListener('click', () => {
 /* light/dark mode based on system */
 
 /* Send Form */
-const alrtSuccess = document.getElementById('alert-success')
+/* const alrtSuccess = document.getElementById('alert-success')
 const alrtDanger = document.getElementById('alert-danger')
 
 const handleForm = (e) => {
@@ -236,4 +236,4 @@ const handleForm = (e) => {
     })
 }
 
-document.getElementById('myForm').addEventListener('submit', handleForm)
+document.getElementById('myForm').addEventListener('submit', handleForm) */
